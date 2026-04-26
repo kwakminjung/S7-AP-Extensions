@@ -100,7 +100,10 @@ _ap_placer_instance.on_startup("")
 
 Floor prim bbox를 기준으로 픽셀 좌표 → USD 월드 좌표 자동 계산.
 
-
 ## 관련 레포
 
 - [S7-AP-api](https://github.com/kwakminjung/S7-AP-api) — AP 데이터 수집 API 서버 (aplist-api, template-api)
+
+## Extension 아키텍처
+<img width="1691" height="727" alt="image" src="https://github.com/user-attachments/assets/e8664906-a80e-43f4-af65-67b29e30cbea" />
+
