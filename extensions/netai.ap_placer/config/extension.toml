@@ -1,0 +1,9 @@
+[package]
+title = "AP Placer Tool"
+version = "0.1.0"
+
+[dependencies]
+"omni.kit.viewport.utility" = {}
+
+[[python.module]]
+name = "netai.ap_placer"

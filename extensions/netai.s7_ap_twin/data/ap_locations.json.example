@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "comment": "예시 파일",
+  "floors": [
+    {
+      "id": "Floor_1",
+      "usd_path": "/World/Ground/Floor_1",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 100.0,
+      "aps": [
+        {
+          "id": "GIST-1st-AP",
+          "px": 10,
+          "py": 10
+        },
+        ...
+      ]
+    },
+    {
+      "id": "Floor_2",
+      "usd_path": "/World/Ground/Floor_2",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 200.0,
+      "aps": [
+        {
+          "id": "GIST-2nd-AP",
+          "px": 20,
+          "py": 20
+        },
+        ...
+      ]
+    },
+    {
+      "id": "Outdoor",
+      "usd_path": "/World/Ground/??",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 300.0,
+      "aps": [
+        {
+          "id": "GIST-??-AP",
+          "px": 30,
+          "py": 30
+        },
+        ...
+      ]
+    }
+  ]
+}
