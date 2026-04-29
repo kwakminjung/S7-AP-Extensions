@@ -20,6 +20,7 @@ from .usd_utils import (
     safe_prim_name,
     tx_power_to_radius,
 )
+from .ap_info import ApInfoPanel
 
 _env = load_env()
 API_BASE_URL = _env.get("S7_AP_API_URL",    "http://localhost:8001")
@@ -41,7 +42,16 @@ class NetaiS7ApTwinExtension(omni.ext.IExt):
         self._timeline       = None
         self._ap_positions   = {}
         self._template_cache = {}   # template_num → template dict
+        self._last_ap_map = {}
+        self._ap_info = ApInfoPanel()
         self._task           = asyncio.ensure_future(self._wait_for_stage())
+
+    def _get_ap_data_for_info(self, ap_id: str):
+        ap_data = self._last_ap_map.get(ap_id, {})
+        template_num = ap_data.get("Template", "")
+        template = self._template_cache.get(str(template_num), {})
+
+        return ap_data, template
 
     async def _wait_for_stage(self) -> None:
         import carb
@@ -61,6 +71,7 @@ class NetaiS7ApTwinExtension(omni.ext.IExt):
             if stage is not None:
                 self._stage        = stage
                 self._ap_positions = load_ap_positions(stage)
+                self._ap_info.setup(self._get_ap_data_for_info)
                 print("[netai.s7_ap_twin] stage ready")
                 await self._update_loop()
                 return
@@ -140,6 +151,7 @@ class NetaiS7ApTwinExtension(omni.ext.IExt):
 
         ap_list = body.get("data", [])
         ap_map  = {item["Name"]: item for item in ap_list if "Name" in item}
+        self._last_ap_map = ap_map
 
         for ap_id in self._ap_positions:
             ap_data     = ap_map.get(ap_id, {})
@@ -195,6 +207,7 @@ class NetaiS7ApTwinExtension(omni.ext.IExt):
         self._running = False
         if self._timeline and self._timeline.is_playing():
             self._timeline.stop()
+        self._ap_info.teardown()
         if self._task:
             self._task.cancel()
             self._task = None

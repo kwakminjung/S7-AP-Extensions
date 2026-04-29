@@ -1,0 +1,148 @@
+{
+  "version": "1.0",
+  "comment": "px/py = 도면 이미지 픽셀 좌표 (left-top 기준). USD 좌표는 Floor prim bbox + 비율로 자동 계산됨.",
+  "floors": [
+    {
+      "id": "Floor_1",
+      "usd_path": "/World/Ground/A_Exterior/Floor_1",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 300.0,
+      "aps": [
+        {
+          "id": "GIST-AP-01",
+          "px": 728.1,
+          "py": 870.7
+        },
+        {
+          "id": "GIST-AP-02",
+          "px": 975.2,
+          "py": 330.7
+        },
+        {
+          "id": "GIST-AP-03-1F-Hall-Left-Top",
+          "px": 236.5,
+          "py": 1244.7
+        },
+        {
+          "id": "GIST-AP-04-1F-Hall-Left-Bottom",
+          "px": 403.4,
+          "py": 1461.1
+        },
+        {
+          "id": "GIST-AP-05",
+          "px": 785.9,
+          "py": 1617.8
+        },
+        {
+          "id": "GIST-AP-06",
+          "px": 344.4,
+          "py": 341.8
+        },
+        {
+          "id": "GIST-AP-14",
+          "px": 1225.5,
+          "py": 1218.6
+        },
+        {
+          "id": "GIST-AP-15-1F-Hall-Right-Top",
+          "px": 216.2,
+          "py": 1726.0
+        },
+        {
+          "id": "GIST-AP-16-1F-Hall-Right-Bottom",
+          "px": 389.1,
+          "py": 1729.7
+        },
+        {
+          "id": "GIST-AP-17-DeepRacer",
+          "px": 1103.4,
+          "py": 860.4
+        },
+        {
+          "id": "GIST-AP-19-1F-Hall-Center",
+          "px": 336.2,
+          "py": 1352.9
+        }
+      ]
+    },
+    {
+      "id": "Floor_2",
+      "usd_path": "/World/Ground/A_Exterior/Floor_2",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 600.0,
+      "aps": [
+        {
+          "id": "GIST-AP-07",
+          "px": 343.0,
+          "py": 1108.6
+        },
+        {
+          "id": "GIST-AP-08",
+          "px": 874.9,
+          "py": 322.5
+        },
+        {
+          "id": "GIST-AP-09",
+          "px": 758.5,
+          "py": 1083.8
+        },
+        {
+          "id": "GIST-AP-10",
+          "px": 1554.6,
+          "py": 1635.6
+        },
+        {
+          "id": "GIST-AP-11",
+          "px": 332.0,
+          "py": 317.7
+        },
+        {
+          "id": "GIST-AP-12",
+          "px": 535.7,
+          "py": 1722.3
+        },
+        {
+          "id": "GIST-AP-13",
+          "px": 1837.0,
+          "py": 1623.4
+        },
+        {
+          "id": "GIST-AP-18",
+          "px": 1258.2,
+          "py": 623.4
+        }
+      ]
+    },
+    {
+      "id": "Outdoor",
+      "usd_path": "/World/Ground/A_Exterior/Floor_2",
+      "image_width_px": 2000,
+      "image_height_px": 2000,
+      "fallback_ceiling_y": 1150.3,
+      "aps": [
+        {
+          "id": "GIST-AP-21",
+          "px": 2000,
+          "py": 0
+        },
+        {
+          "id": "GIST-AP-22",
+          "px": 0,
+          "py": 500
+        },
+        {
+          "id": "GIST-AP-23",
+          "px": 500,
+          "py": 500
+        },
+        {
+          "id": "GIST-AP-24",
+          "px": 1000,
+          "py": 500
+        }
+      ]
+    }
+  ]
+}
